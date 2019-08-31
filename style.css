@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  /* margin: 0px; */
+}
+
+.wrapper {
+  display: grid;
+  padding: 20px;
+  grid-gap: 20px;
+}
+
+.main-nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  grid-gap: 20px;
+  /* padding: 0px; */
+}
+
+.main-nav a {
+  background: green;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.main-nav a:hover {
+  background: #434343;
+}
+
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "showcase showcase top-box-a"
+    "showcase showcase top-box-b";
+}
+
+.showcase {
+  grid-area: showcase;
+  min-height: 600px;
+  background: url("https://mobilkomersial.com/files/media/thumb2_6d7b66a72f41bd78dda23ecd48728da4.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.showcase h1 {
+  font-size: 4rem;
+  margin-top: 0;
+  color: white;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: white;
+}
+
+.top-box {
+  background: grey;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  padding: 1.5rem;
+}
+
+.top-box .price {
+  font-size: 2.5rem;
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+}
+
+.btn {
+  background: black;
+  color: white;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn:hover {
+  background: #434343;
+}
+
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+  background: grey;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.info {
+  background: grey;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+}
+
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.portfolio img {
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  width: 100%;
+}
+
+footer {
+  margin-top: 2rem;
+  background: #434343;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 700px) {
+  .top-container {
+    grid-template-areas:
+      "showcase showcase"
+      "top-box-a top-box-b";
+  }
+
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .info .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+@media (max-width: 500px) {
+    /* .top-container {
+      grid-template-areas:
+        'showcase'
+        'top-box-a'
+        'top-box-b';
+    } */
+  }
